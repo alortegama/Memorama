@@ -22,7 +22,7 @@ class Exercici3Test : GuiTest() {
         val exception = assertThrows<IndexOutOfBoundsException> {
             game.addNumberInArray(25)
         }
-        assertEquals("Index 25 fora del rang de 16 posicions", exception.message)
+        assertEquals("Index 25 out of bounds for length 16", exception.message)
     }
 
     @Test
