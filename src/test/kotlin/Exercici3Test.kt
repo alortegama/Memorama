@@ -11,7 +11,10 @@ class Exercici3Test : GuiTest() {
     @Test
     fun `Afegir a la posició 5 al tauler buit`() {
         game.addNumberInArray(5)
-        assertTrue(game.cards[5] != 0)
+        assertTrue(
+            game.cards[5] != 0,
+            "Al cridar a la funció addNumberInArray(5), la posició [5] ha de tenir un valor diferent de 0"
+        )
     }
 
     @Test
@@ -19,13 +22,14 @@ class Exercici3Test : GuiTest() {
         val exception = assertThrows<IndexOutOfBoundsException> {
             game.addNumberInArray(25)
         }
-        assertEquals("Index 25 out of bounds for length 16", exception.message)
+        assertEquals("Index 25 fora del rang de 16 posicions", exception.message)
     }
 
     @Test
     fun `Afegir a la posició 7 al tauler buit`() { // Change test name to reflect new boundary index
         game.addNumberInArray(7)
-        assertTrue(game.cards[7] != 0)
+        assertTrue(game.cards[7] != 0,
+            "Al cridar a la funció addNumberInArray(7), la posició [7] ha de tenir un valor diferent de 0")
     }
 
     @Test
