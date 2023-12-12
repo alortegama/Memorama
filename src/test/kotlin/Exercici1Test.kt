@@ -8,8 +8,10 @@ class Exercici1Test : GuiTest() {
 
     @Test
     fun `El número generat està entre 1 i 8`() {
-        val number = game.generateRandomNumber()
-        assertTrue(number in 1..8, "Number should be between 1 and 8")
+        for (i in 1..10000) {
+            val number = game.generateRandomNumber()
+            assertTrue(number in 1..8, "El número aleatori ha d'estar entre 1 i 8")
+        }
     }
 
     @Test
