@@ -1,4 +1,4 @@
-package ad.cfp.memory.test
+package ad.cfp.memory
 
 import ad.cfp.memory.Game
 import javafx.scene.Scene

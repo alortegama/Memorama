@@ -1,4 +1,6 @@
-import ad.cfp.memory.test.GuiTest
+package ad.cfp.memory
+
+import ad.cfp.memory.GuiTest
 import org.junit.jupiter.api.Test
 
 class Exercici4Test : GuiTest() {

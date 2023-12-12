@@ -1,4 +1,4 @@
-package ad.cfp.memory.test
+package ad.cfp.memory
 
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test

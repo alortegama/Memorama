@@ -1,5 +1,5 @@
-
-import ad.cfp.memory.test.GuiTest
+package ad.cfp.memory
+import ad.cfp.memory.GuiTest
 import javafx.scene.control.Button
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test

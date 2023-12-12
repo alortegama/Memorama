@@ -1,5 +1,6 @@
-package ad.cfp.memory.test
+package ad.cfp.memory
 
+import ad.cfp.memory.GuiTest
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 

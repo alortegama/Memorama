@@ -1,7 +1,6 @@
-package ad.cfp.memory.test
+package ad.cfp.memory
 
 import org.junit.jupiter.api.Assertions.*
-import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 
