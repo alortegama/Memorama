@@ -27,7 +27,12 @@ class Exercici2Test : GuiTest() {
         val expectedResult = 1
         val actualResult = game.countValuesInArray(5)
 
-        Assertions.assertEquals(expectedResult, actualResult)
+        Assertions.assertEquals(
+            expectedResult,
+            actualResult,
+            "Donade les tarjetes [1,1,5,7,1,2,6,8,8,6,7,2,3,4,3,4] el número 5 només ha d'apareixer 1 vegada, en canvi surt $actualResult"
+        )
+
     }
 
     @Test
@@ -50,10 +55,18 @@ class Exercici2Test : GuiTest() {
         game.cards[14] = 3
         game.cards[15] = 4
 
-        val expectedResult = 2
-        val actualResult = game.countValuesInArray(5)
 
-        Assertions.assertEquals(expectedResult, actualResult)
+        for (i in 1..8) {
+            val expectedResult = 2
+            val actualResult = game.countValuesInArray(i)
+            Assertions.assertEquals(
+                expectedResult,
+                actualResult,
+                "Donat el nombre $i ha d'apareixer 2 vegades, però hi ha $actualResult"
+            )
+        }
+
+
     }
 
     @Test
@@ -75,11 +88,16 @@ class Exercici2Test : GuiTest() {
         game.cards[14] = 3
         game.cards[15] = 4
 
-        // now we test it
+
         val expectedResult = 3
         val actualResult = game.countValuesInArray(5)
 
-        Assertions.assertEquals(expectedResult, actualResult)
+        Assertions.assertEquals(
+            expectedResult,
+            actualResult,
+            "Donat l'array [5,5,5,7,1,2,6,8,8,6,7,2,3,4,3,4] el nombre 5 apareix 3 vegades, però la funció retorna $actualResult"
+        )
+
     }
 
     @Test
@@ -89,8 +107,11 @@ class Exercici2Test : GuiTest() {
             game.cards[i] = 2
         }
         val sameExpectedResult = 16
-        val sameActualResult = game.countValuesInArray(2)
-        Assertions.assertEquals(sameExpectedResult, sameActualResult)
+        val actualResult = game.countValuesInArray(2)
+        Assertions.assertEquals(
+            sameExpectedResult, actualResult,
+            "Donat l'array [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2] el nombre 2 apareix 16 vegades, però la funció retorna $actualResult"
+        )
     }
 
     @Test
@@ -100,8 +121,11 @@ class Exercici2Test : GuiTest() {
             game.cards[i] = i + 2
         }
         val notExistExpectedResult = 0
-        val notExistActualResult = game.countValuesInArray(1)
-        Assertions.assertEquals(notExistExpectedResult, notExistActualResult)
+        val actualResult = game.countValuesInArray(1)
+        Assertions.assertEquals(
+            notExistExpectedResult, actualResult,
+            "Donat l'array [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18] el nombre 1 apareix 0 vegades, però la funció retorna $actualResult"
+        )
     }
 
 
