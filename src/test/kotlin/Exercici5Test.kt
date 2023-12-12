@@ -12,7 +12,7 @@ class Exercici5Test : GuiTest() {
         game.fillArray()
         game.writeNumberInButton(buttons[0], 0)
         val expected = game.cards[0].toString()
-        assertEquals(buttons[0].text, expected)
+        assertEquals(buttons[0].text, expected,"Al escriure el valor $expected al botó[0], ha de sortir $expected no ${buttons[0].text} ")
     }
 
     @Test
