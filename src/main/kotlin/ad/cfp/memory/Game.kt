@@ -92,7 +92,9 @@ class Game(val scene: Scene, val board: GridPane) {
     }
 
     /**
-     * Afegeix un número aleatori a l'array tarjetes a la posició especificada.
+     * Donada una posició especifica, ha de generar un nombre aleatori.
+     * Si aquest número generat existeix en l'array dues vegades, ha de generar un altre.
+     * El procés es durà a terme fins a trobar-ne un que no estigui dues vegades.
      *
      * @param pos La posició on es pot afegir el número.
      */
@@ -101,7 +103,7 @@ class Game(val scene: Scene, val board: GridPane) {
     }
 
     /**
-     * Ompla l'array `tarjetes` amb números aleatoris entre 1 i 8. Si un nombre
+     * Ompla l'array `cards` amb números aleatoris entre 1 i 8. Si un nombre
      * ja existeix dues vegades a l'array, es genera un nou número aleatori per
      * a aquesta posició.
      */
