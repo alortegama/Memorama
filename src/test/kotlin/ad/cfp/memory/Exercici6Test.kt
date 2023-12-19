@@ -33,7 +33,7 @@ class Exercici6Test : GuiTest() {
         game.play(button2, 1)
         assertEquals(game.rotateCard, 0)
         assertEquals(game.lastButton, null)
-        assertEquals(game.pendingCards, 7)
+        assertEquals(7,game.pendingCards)
     }
 
     @Test
@@ -43,11 +43,13 @@ class Exercici6Test : GuiTest() {
         val button2 = buttons[1]
         game.cards[0] = 1
         game.cards[1] = 2
+        game.writeNumberInButton(button1, 0)
+        game.writeNumberInButton(button2, 1)
         game.play(button1, 0)
         game.play(button2, 1)
         assertEquals(game.rotateCard, 0)
         assertEquals(game.lastButton, null)
-        assertEquals(game.pendingCards, 8)
+        assertEquals(8,game.pendingCards)
     }
 
     @Test
@@ -66,7 +68,7 @@ class Exercici6Test : GuiTest() {
 
         assertEquals(game.rotateCard, 0)
         assertEquals(game.lastButton, null)
-        assertEquals(game.pendingCards, 0)
+        assertEquals(0,game.pendingCards)
 
     }
 }
