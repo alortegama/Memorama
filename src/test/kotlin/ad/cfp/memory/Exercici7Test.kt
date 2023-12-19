@@ -19,8 +19,9 @@ class Exercici7Test : GuiTest() {
             game.cards[2 * i] = i + 1
             game.cards[2 * i + 1] = i + 1
         }
-        buttons.forEach {
-            game.play(it, buttons.indexOf(it))
+        buttons.forEachIndexed { index, it ->
+            game.writeNumberInButton(it, index)
+            game.play(it, index)
 
         }
     }
