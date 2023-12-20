@@ -1,4 +1,5 @@
 package ad.cfp.memory
+
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 
@@ -33,7 +34,7 @@ class Exercici6Test : GuiTest() {
         game.play(button2, 1)
         assertEquals(game.rotateCard, 0)
         assertEquals(game.lastButton, null)
-        assertEquals(7,game.pendingCards)
+        assertEquals(7, game.pendingCards)
     }
 
     @Test
@@ -49,7 +50,7 @@ class Exercici6Test : GuiTest() {
         game.play(button2, 1)
         assertEquals(game.rotateCard, 0)
         assertEquals(game.lastButton, null)
-        assertEquals(8,game.pendingCards)
+        assertEquals(8, game.pendingCards)
     }
 
     @Test
@@ -62,13 +63,14 @@ class Exercici6Test : GuiTest() {
             game.cards[2 * i] = i + 1
             game.cards[2 * i + 1] = i + 1
         }
-        buttons.forEach {
-            game.play(it, buttons.indexOf(it))
+        buttons.forEachIndexed { index, it ->
+            game.writeNumberInButton(it, index)
+            game.play(it, index)
         }
 
         assertEquals(game.rotateCard, 0)
         assertEquals(game.lastButton, null)
-        assertEquals(0,game.pendingCards)
+        assertEquals(0, game.pendingCards)
 
     }
 }
